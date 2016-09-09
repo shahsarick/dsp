@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Right now Emacs but I might switch to vim I didn't use a text editor much before so I'm going to see how comfortable I get with it. 
 
 --
 
@@ -68,6 +68,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Spyder, I used this for my grad school projects I like the variable explorer plus the script and regular code areas. F5 to run code, ctrl+s for saving my work etc for shortcuts. 
 
  
