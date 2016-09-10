@@ -83,6 +83,12 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
+    
+    x = []
+    for i in nums:
+        if len(x) == 0 or i != x[-1]:
+            x.append(i)
+    return x
     raise NotImplementedError
 
 
