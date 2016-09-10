@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Tuples are comprised of entries that can have different meanings, lists are comprised of entries which have the same type. Tuples have structure, lists have order. Tuples are immutable as well while lists are mutable. This means that tuples can be used as keys in a dictionary. 
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Sets are unordered while lists are ordered. Also the items in a set have to be hashable. Sets are way faster than lists if the goal is to see if a value is present in the set but sets are slower when it comes to iteration compared to lists. 
 
 ---
 
@@ -28,7 +28,17 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> lambda is an anonymous function rather than an arbitrary function and the parameter being accepted would be the variable you're working with, and the column in which you're sorting it on.
+
+Ex: >>> (lambda y: y+10)(3)
+13 
+
+For sorted() here's an example:
+ >>> sorted(['A', 'C', 'B', 'D'], key=lambda word: word.lower())
+['A', 'B', 'C', 'D']
+
+
+
 
 ---
 
@@ -36,7 +46,31 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> x = [1, 9, 0, 4]
+
+squares = [ e**2 for e in x]
+
+print squares
+# [ 1, 81, 0, 16 ]
+
+The filter applies a predicate to the sequence and map modifies each member of a sequence. Ex:
+
+>> map(lambda e: e**2, filter(lambda e: type(e) == types.IntType, x))
+
+In the statement above, it calls to filter and map as well as type.  
+
+
+Set comprehension:
+
+>>> nums = set(n**2 for n in range(10))
+>>> nums
+{0, 1, 64, 4, 36, 9, 16, 49, 81, 25}
+
+Dictioary comprehension layout is in the form:
+{key: value for (key, value) in iterable}
+
+
+
 
 ---
 
@@ -51,7 +85,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +93,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +101,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
