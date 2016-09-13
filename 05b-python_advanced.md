@@ -22,8 +22,11 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 
 In[148]: df.groupby(df[0]).size()
+
 Out[148]: 
+
 0
+
 0        1
 
 bsed     1
