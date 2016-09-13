@@ -33,3 +33,19 @@ titles = [y[2] for y in facultylist]
 titles.pop(0)
 df2 = pd.DataFrame(titles)
 df2.groupby(df2[0]).size()
+
+'''
+Search for email addresses and put them in a list. Print the list of email addresses.
+
+'''
+emails = [y[3] for y in facultylist]
+emails.pop(0)
+
+"""
+List unique domains and count number of unique domains
+"""
+domains = []
+for i in emails:
+    domains.append(i[i.index("@"):])
+list(set(domains))
+len(list(set(domains)))
