@@ -19,39 +19,27 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 ####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
-import string
-import pandas as pd
 
-with open('faculty.csv', 'rb') as f:
-    reader = csv.reader(f)
-    facultylist = list(reader)   
-degrees = [y[1] for y in facultylist]
-
-def remove_punctuation_and_split(word):
-    return word.translate(None, string.punctuation) 
-degrees_no_punctuation = []
-
-for text in degrees:
-    degrees_no_punctuation.append(remove_punctuation_and_split(text))    
-degrees_lower = []
-[degrees_lower.append(z.lower().split()) for z in degrees_no_punctuation]  
-
-   
-flattened  = [val for sublist in degrees_lower for val in sublist]
-flattened.pop(0)
-df = pd.DataFrame(flattened)
 
 In[148]: df.groupby(df[0]).size()
 Out[148]: 
 0
 0        1
+
 bsed     1
+
 jd       1
+
 ma       1
+
 md       1
+
 mph      2
+
 ms       2
+
 phd     31
+
 scd      6
 
 
