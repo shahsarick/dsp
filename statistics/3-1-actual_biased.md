@@ -21,7 +21,7 @@ def BiasPmf(pmf, label):
     
 biased = BiasPmf(actual, label='observed')
 thinkplot.PrePlot(2)
-thinkplot.Pmfs([biased])
+thinkplot.Pmfs(biased)
 
 biased.Mean() #2.4036791006642821
 ```
