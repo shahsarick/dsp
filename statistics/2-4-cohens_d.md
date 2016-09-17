@@ -3,13 +3,10 @@
 >>-0.069049861392
 ```python
 import nsfg
-import pandas as pd
 from statistics import mean, stdev
 from math import sqrt
 df = nsfg.ReadFemPreg()
-df.dropna
 df1 = df[['pregordr', 'totalwgt_lb']]
-df1.dropna
 df2 = df1[df1.pregordr.notnull()]
 df2 = df1[df1.totalwgt_lb.notnull()]
 list1 = df2.values.tolist()
